@@ -1,3 +1,5 @@
+import java.security.spec.RSAOtherPrimeInfo;
+
 public class HelloWorld {
     public static void main(String[] args) {
         int myFavoriteNumber = 26;
@@ -6,6 +8,8 @@ public class HelloWorld {
         myString = "3.14159";
 
         float myNumberTwo = (float) 3.14;
+//        float myNumberTwo = 3.14F; is same thing
+//        compiler implies that the decimal is a double.
         double myNumber = 3.14;
 //        System.out.println(myNumber);
         //why when I use float, does it have me cast float again?
