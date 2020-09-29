@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class ConsoleExercises {
+    public static void main(String[] args) {
+
+//        double pi = 3.14159;
+//        System.out.format("The value of Pi is %d", pi);
+
+        Scanner sc = new Scanner(System.in);
+        sc.useDelimiter("-");
+
+//        System.out.println("Enter a number");
+//        double userInput = sc.nextInt();
+//        System.out.printf("The number you entered is %s. \n", userInput);
+//
+//        System.out.println("What is your name?");
+//        String firstName = sc.next();
+//        String middleName = sc.next();
+//        String lastName = sc.next();
+//        System.out.printf("Your name is %s %s %s \n", firstName, middleName, lastName);
+
+//        System.out.println("Enter a sentance.");
+//        String sentance = sc.nextLine();
+//        System.out.printf(sentance);
+
+//        System.out.println("What is the length of the classroom?");
+//        double length = sc.nextInt();
+//        System.out.println("What is the width of the classroom?");
+//        double width = sc.nextInt();
+
+        System.out.println("What is the length and width of the classroom?");
+        double length = sc.nextInt();
+        double width = sc.nextInt();
+        double area = (length * width);
+        double perimeter = (2 * length) + (2 * width);
+        System.out.printf("The perimeter of the classroom is %.0f units & the area is %.0f units.", perimeter, area);
+    }
+}
