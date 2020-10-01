@@ -66,11 +66,11 @@ public class ControlFlowExercises {
             System.out.println("Please enter your number grade:");
             int userGrade = sc.nextInt();
 
-            String a = "A";
-            String b = "B";
-            String c = "C";
-            String d = "D";
-            String f = "F";
+//            String a = "A";
+//            String b = "B";
+//            String c = "C";
+//            String d = "D";
+//            String f = "F";
 
             if (userGrade <= 100 && userGrade >= 88) {
                 System.out.println("Your letter grade is: A");
