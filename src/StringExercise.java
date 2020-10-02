@@ -1,7 +1,7 @@
 public class StringExercise {
 
     public static void main(String[] args) {
-        String edu = "We dont need no education.";
+        String edu = "We dont need no education. \n We dont need not thought control.";
         System.out.println("edu = " + edu);
 
         String thoughtControl = "We dont need not thought control.";
