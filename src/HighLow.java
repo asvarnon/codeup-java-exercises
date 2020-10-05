@@ -5,7 +5,7 @@ public class HighLow {
         Scanner scan = new Scanner(System.in);
         int range = 100 - 1 + 1;
         int numberToGuess = (int) ((Math.random() * range) + 1);
-        System.out.println("numberToGuess = " + numberToGuess);
+//        System.out.println("numberToGuess = " + numberToGuess);
 
         while(true){
             System.out.println("Guess a number between 1 and 100");
