@@ -4,7 +4,13 @@ public class PersonTest {
         Person mark = new Person("Mark Hooligan", 28, "green");
         Person joe = new Person("Joe Singer", 30);
 
+        austin.setName("Austin");
+        austin.getName();
+        austin.sayHello();
 
+        mark.setName("Markie");
+        mark.getName();
+        mark.sayHello();
 
     }
 }

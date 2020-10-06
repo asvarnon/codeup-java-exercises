@@ -1,6 +1,6 @@
 public class Person {
 
-    public String name;
+    private String name;
     public int age;
     public String favoriteColor;
 
@@ -33,8 +33,8 @@ public class Person {
         System.out.println(this.name);
 //TODO: change the name property to the passed value
     }
-    public String sayHello(){
-        return String.format("%s says hello!", this.name);
+    public void sayHello(){
+        System.out.printf("%s says hello! \n", this.name);
 //TODO: print a message to the console using the person's name
     }
 
