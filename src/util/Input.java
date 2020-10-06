@@ -15,9 +15,7 @@ public class Input {
         this.scan = new Scanner(System.in);
         System.out.println("Enter a yes or no Value");
         String userInput = scan.nextLine();
-        if (userInput.equals("yes") || userInput.equals("y") || userInput.equals("ys") || userInput.equals("yea")){
-            return true;
-        } else { return false; }
+        return userInput.equals("yes") || userInput.equals("y") || userInput.equals("ys") || userInput.equals("yea");
 
     }
 
@@ -34,7 +32,7 @@ public class Input {
             System.out.println("This is an invalid number outside the range. Try again.");
             return getInt(min, max);
         } else {
-            System.out.printf("%s is valid. \n", userInput);
+            System.out.printf("%d is valid. \n", userInput);
             return userInput;
         }
     }
@@ -51,7 +49,7 @@ public class Input {
             System.out.println("This is an invalid number outside the range. Try again.");
             return getDouble(min, max);
         } else {
-            System.out.printf("%s is valid.", userInput);
+            System.out.printf("%f is valid. \n", userInput);
             return userInput;
         }
     }
