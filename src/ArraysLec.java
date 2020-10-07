@@ -46,6 +46,44 @@ public class ArraysLec {
 //        System.out.println("Arrays.toString(numbers) = " + Arrays.toString(numbers));
 
 
+        //~~~~~~~~ matrix~~~~~~~~~~
+//        int[][] matrix = {
+//                {1, 2, 3},
+//                {4, 5, 6},
+//                {7, 8, 9}
+//        };
+//
+//// access the first element in the second row
+//        System.out.println(matrix[1][0]); // 4
+//// the last element in the first row
+//        System.out.println(matrix[0][2]); // 3
+//// the first element in the last row
+//        System.out.println(matrix[2][0]); // 7
+//
+//        for (int[] row : matrix) {
+//            System.out.println("+---+---+---+");
+//
+//            System.out.print("| ");
+//
+//            for (int cell : row) {
+//                System.out.print(cell + " | ");
+//            }
+//
+//            System.out.println();
+//        }
+
+        //~~~~~~~~~~Array of objects~~~~~~~~~~
+        //using previous person class
+        Person[] persons = new Person[2];
+        persons[0] = new Person("Austin");
+        persons[1] = new Person("Joe");
+
+        for (Person person : persons) {
+            person.sayHello();
+            System.out.println("Hi " + person.getName() + ", welcome to my world!");
+        }
+
+
     }
 }
 
