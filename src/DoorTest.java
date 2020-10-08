@@ -10,16 +10,25 @@ public class DoorTest {
 //        backGlassSlidingDoor.close();
 //        backGlassSlidingDoor.open();
 
-        LockingDoor backDoor = new LockingDoor("back");
-        backDoor.open();
-        System.out.println("backDoor.isOpen() = " + backDoor.isOpen());
-        System.out.println("backDoor.isLocked() = " + backDoor.isLocked());
-        backDoor.unlock();
-        backDoor.unlock();
-        backDoor.open();
-        backDoor.close();
-        backDoor.lock();
-        System.out.println("backDoor.isLocked() = " + backDoor.isLocked());
+//        LockingDoor backDoor = new LockingDoor("back");
+//        backDoor.open();
+//        System.out.println("backDoor.isOpen() = " + backDoor.isOpen());
+//        System.out.println("backDoor.isLocked() = " + backDoor.isLocked());
+//        backDoor.unlock();
+//        backDoor.unlock();
+//        backDoor.open();
+//        backDoor.close();
+//        backDoor.lock();
+//        System.out.println("backDoor.isLocked() = " + backDoor.isLocked());
+
+        Door[] doors = new Door[3];
+        doors[0] = new LockingDoor("Front");
+        doors[1] = new LockingDoor("Back");
+        doors[2] = new SlidingDoor("Front glass");
+
+        for(Door door : doors){
+            door.open();
+        }
 
     }
 
