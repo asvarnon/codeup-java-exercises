@@ -41,7 +41,8 @@ public class MoviesApplication {
 
         switch (selectedInput){
             case 0:
-                return;
+                System.exit(0);
+                break;
             case 1:
                 selectedMovies(movieList);
                 break;
