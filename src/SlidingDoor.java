@@ -1,4 +1,4 @@
-public class SlidingDoor extends Door {
+public class SlidingDoor extends LockingDoor {
     //default constructor
     public SlidingDoor(String description){
         super(description);
