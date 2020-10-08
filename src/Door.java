@@ -1,6 +1,6 @@
 public class Door {
     private boolean open;
-    private String description;
+    protected String description;
 
     //constructors
     public Door(String description){
@@ -29,5 +29,7 @@ public class Door {
         System.out.printf("Opening the %s door.\n", this.description);
         this.open = true;
     }
+
+
 
 }

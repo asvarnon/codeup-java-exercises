@@ -5,12 +5,12 @@ public class SlidingDoor extends Door {
     }
 
     public void open(){
-        System.out.println("Attempting to slide open the door...");
+        System.out.printf("Attempting to slide open the %s door...\n", this.description);
         super.open();
     }
 
     public void close(){
-        System.out.println("Attempting to close the door...");
+        System.out.printf("Attempting to close the %s door...\n", this.description);
         super.close();
     }
 }
