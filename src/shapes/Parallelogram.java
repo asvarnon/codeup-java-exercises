@@ -28,6 +28,12 @@ public class Parallelogram extends Quadrilateral{
         System.out.println("Parallelogram");
         return this.base * this.height;
     }
+
+    @Override
+    public double getCircumference() {
+        return 0;
+    }
+
     @Override
     public double getPerimeter(){
         System.out.println("Parallelogram");

@@ -16,10 +16,18 @@ public class Rectangle extends Quadrilateral {
     }
     @Override
     public double getArea(){
+        System.out.println("Rectangle");
         return this.length * this.width;
     }
+
+    @Override
+    public double getCircumference() {
+        return 0;
+    }
+
     @Override
     public double getPerimeter(){
+        System.out.println("Rectangle");
         return (2 * this.length) + (2 * this.width);
     }
 
