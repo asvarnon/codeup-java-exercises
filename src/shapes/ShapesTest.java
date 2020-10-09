@@ -3,22 +3,17 @@ package shapes;
 public class ShapesTest {
     public static void main(String[] args) {
 
-        Rectangle[] rectGroup = new Rectangle[2];
+        Measurable[] myShapes = new Quadrilateral[3];
 
-        rectGroup[0] = new Rectangle(5, 4);
-        rectGroup[1] = new Square(5);
+        myShapes[0] = new Square(5, 5);
+        myShapes[1] = new Rectangle(5, 3);
+        myShapes[2] = new Parallelogram(10, 8, 9);
 
-        for(Rectangle rect : rectGroup){
-            System.out.println("rect.getArea() = " + rect.getArea());
-            System.out.println("rect.getPerimeter() = " + rect.getPerimeter());
+        for(Measurable shape : myShapes){
+            System.out.println("shape.getArea() = " + shape.getArea());
+            System.out.println("shape.getPerimeter() = " + shape.getPerimeter());
         }
 
-//        System.out.println("box1.getArea() = " + box1.getArea());
-//        System.out.println("box1.getPerimeter() = " + box1.getPerimeter());
-//
-//        System.out.println("box2.getArea() = " + box2.getArea());
-//        System.out.println("box2.getPerimeter() = " + box2.getPerimeter());
-
-
     }
+
 }
