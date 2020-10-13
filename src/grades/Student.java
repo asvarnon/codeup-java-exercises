@@ -24,17 +24,29 @@ public class Student {
 
     // returns the average of the students grades
     public double getGradeAverage(){
-        int total = 0;
+        double total = 0;
         for(int grade : grades){
-            return total + grades.get(grade);
+            total += grade;
         }
         return total/grades.size();
     }
 
-    public static void main(String[] args) {
 
 
-
-
-    }
+//    public static void main(String[] args) {
+//
+//        ArrayList<Student> students = new ArrayList<>();
+//
+//        students.add(new Student("Austin Varnon", 95));
+//        students.add(new Student("Bob Sanger", 80));
+//        students.add(new Student("Billy Bob", 65));
+//
+//        for(Student student: students){
+//            System.out.println("student.getName() = " + student.getName());
+//            student.addGrade(80);
+//            System.out.println("student.grades = " + student.grades);
+//            System.out.println("student.getGradeAverage() = " + student.getGradeAverage());
+//        }
+//
+//    }
 }
