@@ -2,7 +2,9 @@ package Collections;
 
 import oopLec.Post;
 
+import javax.naming.ldap.HasControls;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CollectionsLec {
     public static void main(String[] args) {
@@ -32,5 +34,29 @@ public class CollectionsLec {
             }
         }
 
+        hashMapsPractice();
+
     }
+
+
+    public static void hashMapsPractice(){
+        HashMap<String, String> usernames = new HashMap<>();
+        // first parameter becomes the unique key. Put also overwrites the previous input with same key value.
+        usernames.put("avarnon", "Austin Varnon");
+        usernames.put("avarnon", "Austin Scott Varnon");
+
+        System.out.println("usernames.get(\"avarnon\") = " + usernames.get("avarnon"));
+        System.out.println("usernames.get(\"asvarnon\") = " + usernames.getOrDefault("asvarnon", "N/A"));
+
+        if(usernames.containsKey("avarnon")){
+            System.out.println("usernames.get(\"avarnon\") = " + usernames.get("avarnon"));
+        } else {
+            System.out.println("user not found");
+            System.out.println("Roll back transaction");
+            System.out.println("Ask again");
+        }
+    }
+
+
+
 }
