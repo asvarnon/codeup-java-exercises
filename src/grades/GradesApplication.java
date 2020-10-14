@@ -3,7 +3,6 @@ package grades;
 import util.Input;
 
 import java.util.HashMap;
-import java.util.Scanner;
 
 
 public class GradesApplication {
@@ -13,7 +12,8 @@ public class GradesApplication {
     public static void main(String[] args) {
         HashMap<String, Student> students = new HashMap<>();
 
-        students.put("avarnon", new Student("Austin Varnon", 90));
+        students.put("avarnon", new Student("Austin Varnon"));
+        students.get("avarnon").addGrade(90);
         students.get("avarnon").addGrade(85);
         students.get("avarnon").addGrade(93);
 
@@ -31,28 +31,31 @@ public class GradesApplication {
         students.get("griley").addGrade(94);
 
         System.out.println("Welcome!");
-        Scanner scanner = new Scanner(System.in);
         //~~~~~~start do/while
         String c = "y";
+        Input input = new Input();
         do {
-
-            System.out.println("Here are the GitHub usernames of our students:");
+            System.out.println("Here are the GitHub usernames of our students: ");
             for (String key : students.keySet()){
                 System.out.printf("|%s|  ", key);
             }
 
-            System.out.println("Which student would you like more information on?");
-            String userInput = scanner.nextLine();
+            System.out.println("\n Which student would you like more information on?");
+            String userInput = input.getString();
+
             if (!students.containsKey(userInput)){
-                System.out.printf("Sorry, no student found with the GitHub username of \"%s\".", userInput);
+                System.err.printf("Sorry, no student found with the GitHub userInput of \"%s\".\n", userInput);
             } else {
-                // TODO: finish the output of student info.
-//                System.out.println("Name: %s - Github Username: %s \n Current Average: %d", students);
+                System.out.printf("Name: %s - Github Username: %s \nCurrent Average: %f\n",
+                        students.get(userInput).getName(),
+                        userInput,
+                        students.get(userInput).getGradeAverage());
             }
 
-            System.out.println("Would you like to see another student?");
-            c = scanner.nextLine();
+            System.out.println("Would you like to see another student? y/n");
+            c = input.getString();
             if(!c.equalsIgnoreCase("y")){
+                System.out.println("Have a great day!");
                 break;
             }
 
