@@ -1,5 +1,6 @@
 package util;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Input {
@@ -22,16 +23,25 @@ public class Input {
         return scan.nextInt();
     }
 
+    public double getInt(String prompt) {
+        try {
+            return Integer.valueOf(prompt);
+        } catch (Exception e) {
+            System.err.println("Invalid input, try again.");
+            return getInt(getString());
+        }
+    }
 
-//    public int getInt(int min, int max){
-//        int userInput = getInt();
-//        if (userInput >= max || userInput <= min){
-//            System.out.println("This is an invalid number outside the range. Try again.");
-//            return getInt(min, max);
-//        } else {
-//            return userInput;
-//        }
-//    }
+    public double getInt(double min, double max){
+        double userInput = getInt(getString());
+        if (userInput >= max || userInput <= min){
+            System.err.println("This is an invalid number outside the range. Try again.");
+            return getInt(min, max);
+        } else {
+            return userInput;
+        }
+    }
+
 
     public double getDouble(){
         this.scan = new Scanner(System.in);
@@ -39,19 +49,18 @@ public class Input {
     }
 
     public double getDouble(String prompt) {
-        System.out.print(prompt);
         try {
-            return Double.valueOf(getString());
+            return Double.valueOf(prompt);
         } catch (Exception e) {
             System.err.println("Invalid input, try again.");
-            return getDouble(prompt);
+            return getDouble(getString());
         }
     }
 
     public double getDouble(double min, double max){
-        double userInput = getDouble();
+        double userInput = getDouble(getString());
         if (userInput >= max || userInput <= min){
-            System.out.println("This is an invalid number outside the range. Try again.");
+            System.err.println("This is an invalid number outside the range. Try again.");
             return getDouble(min, max);
         } else {
             return userInput;
