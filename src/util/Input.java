@@ -23,19 +23,29 @@ public class Input {
     }
 
 
-    public int getInt(int min, int max){
-        int userInput = getInt();
-        if (userInput >= max || userInput <= min){
-            System.out.println("This is an invalid number outside the range. Try again.");
-            return getInt(min, max);
-        } else {
-            return userInput;
-        }
-    }
+//    public int getInt(int min, int max){
+//        int userInput = getInt();
+//        if (userInput >= max || userInput <= min){
+//            System.out.println("This is an invalid number outside the range. Try again.");
+//            return getInt(min, max);
+//        } else {
+//            return userInput;
+//        }
+//    }
 
     public double getDouble(){
         this.scan = new Scanner(System.in);
         return scan.nextDouble();
+    }
+
+    public double getDouble(String prompt) {
+        System.out.print(prompt);
+        try {
+            return Double.valueOf(getString());
+        } catch (Exception e) {
+            System.err.println("Invalid input, try again.");
+            return getDouble(prompt);
+        }
     }
 
     public double getDouble(double min, double max){
