@@ -11,6 +11,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class FilesLec {
+
+
     public static void main(String[] args) throws IOException {
         String directoryName = "data";
         String fileName = "grocery_list.txt";
@@ -20,7 +22,7 @@ public class FilesLec {
         //have to create a directory first before we create a file.
 
         try {
-            Path.dataFilePath = FileIO.createDirectoryAndFile(directoryName, fileName);
+            Path dataFilePath = FileIO.createDirectoryAndFile(directoryName, fileName);
 
             //lets write grocery list to the file.
             List<String> groceryList = Arrays.asList("Milk","Eggs","Bacon");

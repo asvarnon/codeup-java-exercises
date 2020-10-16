@@ -34,8 +34,7 @@ public class FileIO {
 
     public static void updateLine(Path filePath, String oldValue, String newValue) throws IOException{
         //Replace a line on the file.
-        List<String> fileContents.Files.readAllLines(filePath);
-        fileContents = Files.readAllLines(filePath);
+        List<String> fileContents = Files.readAllLines(filePath);
         List<String> modifiedList = new ArrayList<>();
         for(String item : fileContents){
             if (item.equalsIgnoreCase(oldValue)) {
